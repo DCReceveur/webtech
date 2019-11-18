@@ -45,10 +45,23 @@ ul{
 }
 
 header{
-    border: 5px groove #f0ffb1;
+    border: 5px #f0ffb1;
     border-radius: 50px;
     background-color: #f0ffb1;
     font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.navbar{
+    border: 2px #000000 solid;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_item{
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 2px #000000 solid;
+    border-radius: 50px;
 }
 
 header h1{
@@ -57,7 +70,6 @@ header h1{
     line-height: 80%;
     padding: 10px 10px 10px 10px;
     font-size: 30px;
-
     text-transform: uppercase;
     letter-spacing: 2px;
 }
