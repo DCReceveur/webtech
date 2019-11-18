@@ -1,0 +1,77 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+p, dl{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+body {
+    background-color: #eaffdc;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    max-width: 80%;
+    margin: 10px auto 10px auto;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+    border-top-style: groove;
+}
+
+ul{
+    padding-left: 40px;
+}
+
+
+
+.fotospersonalia img{
+    /*text-align: center;*/
+    border-radius: 50px;
+}
+.bulletpoint_title{
+    font-weight: bold;
+}
+.werkplaats img{
+    width: 100%;
+    margin: auto;
+}
+
+header{
+    border: 5px groove #f0ffb1;
+    border-radius: 50px;
+    background-color: #f0ffb1;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+header h1{
+    font-weight: normal;
+    text-align: center;
+    line-height: 80%;
+    padding: 10px 10px 10px 10px;
+    font-size: 30px;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a{
+    color: forestgreen;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
