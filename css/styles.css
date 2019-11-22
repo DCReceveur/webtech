@@ -74,8 +74,10 @@ a {
     margin: 15px;
     width: 25%;
     max-width:20%;
+    min-width: 200px;
     border: 2px #000000 solid;
     padding: 10px;
+
 }
 
 article a{
