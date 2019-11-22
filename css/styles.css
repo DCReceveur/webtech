@@ -2,18 +2,19 @@
     padding:0;
     margin: 0;
     box-sizing: border-box;
+    font-weight: normal;
+    letter-spacing: 0.5px;
 }
-p, dl{
-    display: block;
+
+p, dl {
     margin-block-start: 1em;
     margin-block-end: 1em;
 }
 
 body {
-    background-color: #eaffdc;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    max-width: 80%;
-    margin: 10px auto 10px auto;
+    background-color: #FFFFFF;
+    font-family: verdana, arial, helvetica, sans-serif;
+    margin: 10px 10% 10px 10%;
 }
 
 footer{
@@ -26,63 +27,102 @@ footer{
     border-top-style: groove;
 }
 
+main{
+    margin: 10px 0;
+}
+
+main div{
+    margin: 10px 10% 10px 10%;
+}
+
 ul{
     padding-left: 40px;
 }
 
+a {
+    color: forestgreen;
+    font-weight: bold;
+    text-decoration: none;
+}
 
+.fotospersonalia{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
 
 .fotospersonalia img{
-    /*text-align: center;*/
     border-radius: 50px;
 }
+
 .bulletpoint_title{
     font-weight: bold;
 }
+
 .werkplaats img{
     width: 100%;
     margin: auto;
 }
 
-header{
-    border: 5px #f0ffb1;
-    border-radius: 50px;
-    background-color: #f0ffb1;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-}
-.navbar{
-    border: 2px #000000 solid;
-    border-radius: 50px;
+.projecten{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.navbar_item{
-    padding-left: 30px;
-    padding-right: 30px;
+.projecten article{
+    margin: 15px;
+    width: 25%;
+    max-width:20%;
     border: 2px #000000 solid;
-    border-radius: 50px;
+    padding: 10px;
 }
 
-header h1{
-    font-weight: normal;
-    text-align: center;
-    line-height: 80%;
-    padding: 10px 10px 10px 10px;
-    font-size: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-a:hover{
+article a{
     text-decoration: underline;
 }
 
-a{
-    color: forestgreen;
-    font-weight: bold;
-    text-decoration: none;
+article img{
+    width: 100%;
 }
+
+.pagina_titel {
+    text-transform: uppercase;
+    margin-top: -10px;
+    border: 5px #f0ffb1;
+    background-color: #FFCD71;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    border-color: #6084A8;
+    margin-top: 1px;
+    width: 100%;
+    justify-content: left;
+    background: linear-gradient(#609CCB, #9FCAF1);
+    flex-flow: wrap;
+    flex-shrink: 1;
+}
+
+.navbar a{
+    padding: 5px 40px 10px 40px;
+    color: #FFFFFF;
+}
+
+
+.navbar a:hover{
+    background: #FFCC66;
+}
+
+.breadcrumb{
+    padding: 10px 0 10px 10px;
+    background: linear-gradient(#E9F8FF, #C8DAEE);
+}
+
+
 
 h2, h3, h4, h5, h6 {
     font-weight: normal;
