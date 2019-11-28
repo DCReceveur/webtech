@@ -35,6 +35,7 @@ main {
     display: flex;
     align-items: center;
     position: relative;
+    padding: 10px;
 }
 
 .homepage{
