@@ -1,41 +1,37 @@
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-weight: normal;
     letter-spacing: 0.5px;
 }
 
-p, dl {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-}
 
 body {
     background-color: #FFFFFF;
     font-family: verdana, arial, helvetica, sans-serif;
-    margin: 10px 10% 10px 10%;
+    margin: 0px 10% 10px 10%;
+    border: 1px solid #6699CC;
+    min-height: 700px;
 }
 
-footer{
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    color: black;
     text-align: center;
-    border-top-style: groove;
 }
 
-main{
+main {
     margin: 10px 0;
 }
 
-main div{
+main div {
     margin: 10px 10% 10px 10%;
 }
 
-ul{
+ul {
     padding-left: 40px;
 }
 
@@ -45,87 +41,142 @@ a {
     text-decoration: none;
 }
 
-.fotospersonalia{
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.fotospersonalia {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
 }
 
-.fotospersonalia img{
+.fotospersonalia img {
     border-radius: 50px;
 }
 
-.bulletpoint_title{
+.bulletpoint_title {
     font-weight: bold;
 }
 
-.werkplaats img{
+.werkplaats img {
     width: 100%;
     margin: auto;
 }
 
-.projecten{
+.projecten {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.projecten article{
+.projecten article {
     margin: 15px;
     width: 25%;
-    max-width:20%;
+    max-width: 20%;
     min-width: 200px;
     border: 2px #000000 solid;
     padding: 10px;
 
 }
 
-article a{
+article a {
     text-decoration: underline;
 }
 
-article img{
+article img {
     width: 100%;
 }
 
 .pagina_titel {
     text-transform: uppercase;
-    margin-top: -10px;
     border: 5px #f0ffb1;
     background-color: #FFCD71;
     text-align: center;
 }
 
-.navbar {
-    display: flex;
-    text-transform: uppercase;
-    border-bottom: 1px solid;
-    border-color: #6084A8;
-    margin-top: 1px;
-    width: 100%;
-    justify-content: left;
-    background: linear-gradient(#609CCB, #9FCAF1);
-    flex-flow: wrap;
-    flex-shrink: 1;
-}
 
-.navbar a{
-    padding: 5px 40px 10px 40px;
-    color: #FFFFFF;
-}
-
-
-.navbar a:hover{
-    background: #FFCC66;
-}
-
-.breadcrumb{
+.breadcrumb {
     padding: 10px 0 10px 10px;
     background: linear-gradient(#E9F8FF, #C8DAEE);
 }
 
-
+.messagebox {
+    width: 10%;
+    height: 50%
+}
 
 h2, h3, h4, h5, h6 {
     font-weight: normal;
+}
+
+/* Dropdown Button */
+button {
+    all: inherit;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: inherit;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    /*background-color: #ddd;*/
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+nav {
+    display: flex;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    border-color: #6084A8;
+    background: linear-gradient(#609CCB, #9FCAF1);
+}
+
+
+.navbar_item{
+    padding: 5px 40px 10px 40px;
+    color: #FFFFFF;
+    margin: auto;
+    width: auto;
+    min-width: 0px;
+    display: block;
+}
+
+@media screen and (max-width: 1000px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.navbar a:hover {
+    background: #FFCC66;
 }
