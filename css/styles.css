@@ -12,23 +12,41 @@ body {
     font-family: verdana, arial, helvetica, sans-serif;
     margin: 0px 10% 10px 10%;
     border: 1px solid #6699CC;
-    min-height: 700px;
 }
 
 footer {
-    position: fixed;
-    left: 0;
+    display: flex;
+    position: relative;
     bottom: 0;
     width: 100%;
-    text-align: center;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    /*text-align: center;*/
+    border-top: 10px solid #FFCD71;
+    background: linear-gradient(#609CCB, #9FCAF1, #609CCB);
+}
+
+textarea{
+    resize: none;
 }
 
 main {
-    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.homepage{
+    padding: 70px;
 }
 
 main div {
     margin: 10px 10% 10px 10%;
+}
+
+p{
+    margin: 10px;
 }
 
 ul {
@@ -89,13 +107,11 @@ article img {
     width: 100%;
 }
 
-.pagina_titel {
+header h1 {
     text-transform: uppercase;
     border: 5px #f0ffb1;
     background-color: #FFCD71;
-    text-align: center;
 }
-
 
 .breadcrumb {
     padding: 10px 0 10px 10px;
@@ -127,6 +143,7 @@ button {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
+    z-index: 1;
 }
 
 /* Links inside the dropdown */

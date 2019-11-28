@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <title>Mijn projecten</title>
 </head>
 <body>
 <header>
-    <h1 class="pagina_titel"><a href="index.html"> <img src="images/hyves_logo.png" width="150px" height="100%"></a>Daan
-        Receveur Hyves</h1>    <nav class="navbar">
+    <h1 class="pagina_titel"><a href="index.html"> <img height="100%" src="images/hyves_logo.png" width="150px"></a>Daan
+        Receveur Hyves</h1>
+    <nav class="navbar">
         </div>
         <div>
-            <a href="index.html" class="navbar_item">Home</a>
+            <a class="navbar_item" href="index.html">Home</a>
         </div>
         <div>
-            <a href="personalia.html" class="navbar_item">Personalia</a>
+            <a class="navbar_item" href="personalia.html">Personalia</a>
         </div>
         <!--        drop down menu start-->
         <div class="dropdown">
-            <button><a href="projecten.html" class="navbar_item">Projecten</a></button>
+            <button><a class="navbar_item" href="projecten.html">Projecten</a></button>
             <div class="dropdown-content">
                 <a href="project_centipede.html">Centipede</a>
                 <a href="#">dit</a>
@@ -26,25 +27,32 @@
         </div>
         <!--        drop down menu end-->
         <div>
-            <a href="contact.html" class="navbar_item">contact</a>
+            <a class="navbar_item" href="contact.html">contact</a>
         </div>
-    </nav>    <div class="breadcrumb">
+    </nav>
+    <div class="breadcrumb">
         Je bent hier: <a href="index.html">Home</a> &gt;
         <a href="contact.html">Contact</a>
     </div>
 </header>
-<div class="form">
-    <form>
-        first name: <br>
-        <input type="text" name="firstname"><br>
-        last name:<br>
-        <input type="text" name="lastname"><br>
-        e-mail:<br>
-        <input type="text" name="email"><br>
-        message:<br>
-        <input type="text" name="message" class="messagebox"><br>
-        <input type="submit" value="Submit" formaction="contact.html">
-    </form>
-</div>
+<main>
+    <div class="form">
+        <form>
+            first name: <br>
+            <input name="firstname" type="text"><br>
+            last name:<br>
+            <input name="lastname" type="text"><br>
+            e-mail:<br>
+            <input name="email" type="text"><br>
+            message:<br>
+            <textarea name="message" rows="5" cols="40"></textarea> <br>
+            <input formaction="contact.html" type="submit" value="Submit">
+        </form>
+    </div>
+</main>
+<footer>
+    &copy; - 2019 - Daan Receveur - 642199 - ITN 1C
+</footer>
+
 </body>
 </html>
