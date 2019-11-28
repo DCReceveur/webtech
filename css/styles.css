@@ -27,6 +27,10 @@ footer {
     background: linear-gradient(#609CCB, #9FCAF1, #609CCB);
 }
 
+header img{
+    width:150px;
+}
+
 textarea{
     resize: none;
 }
@@ -40,6 +44,9 @@ main {
 
 .homepage{
     padding: 70px;
+}
+.homepage img{
+    width:400px;
 }
 
 main div {
@@ -128,11 +135,6 @@ h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-/* Dropdown Button */
-button {
-    all: inherit;
-}
-
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: inherit;
@@ -192,6 +194,9 @@ nav {
     nav {
         flex-direction: column;
         justify-content: center;
+    }
+    main{
+        display: block;
     }
 }
 
