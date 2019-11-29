@@ -1,0 +1,27 @@
+.projecten {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projecten article {
+    margin: 15px;
+    max-width: 20%;
+    min-width: 200px;
+    border: 2px #000000 solid;
+    padding: 10px;
+}
+
+article a {
+    text-decoration: underline;
+}
+
+article img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .projecten article {
+        max-width: 100%;
+    }
+}
