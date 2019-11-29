@@ -3,11 +3,13 @@
 <head>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn projecten</title>
 </head>
 <body>
 <header>
-    <h1 class="pagina_titel"><a href="index.html"> <img src="images/hyves_logo.png" alt="Het hyves logo met de hoofden vervangen door Daan's hoofd"></a>Daan
+    <h1 class="pagina_titel"><a href="index.html"> <img src="media/images/hyves_logo.png"
+                                                        alt="Het hyves logo met de hoofden vervangen door Daan's hoofd"></a>Daan
         Receveur Hyves</h1>
     <nav class="navbar">
         <div>
@@ -35,19 +37,18 @@
     </div>
 </header>
 <main>
-<!--    <div class="form">-->
-        <form>
-            *first name: <br>
-            <input name="firstname" type="text" required><br>
-            last name:<br>
-            <input name="lastname" type="text"><br>
-            *e-mail:<br>
-            <input name="email" type="text" required><br>
-            *message:<br>
-            <textarea name="message" rows="5" cols="40" required></textarea> <br>
-            <input formaction="contact.html" type="submit" value="Submit">
-        </form>
-<!--    </div>-->
+    <form>
+        <label for="firstname">*Voornaam</label> <br>
+        <input name="firstname" id="firstname" type="text" required><br>
+        <label for="lastname">Achternaam</label><br>
+        <input name="lastname" id="lastname" type="text"><br>
+        <laber for="email">*e-mail</laber><br>
+        <input name="email" id="email" type="text" required><br>
+        <laber for="message">*Bericht</laber><br>
+        <textarea name="message" id="message" rows="5" required></textarea> <br>
+        <input formaction="contact.html" type="submit" value="Submit">
+    </form>
+<img src="media/images/hoogeveldt_map.PNG" alt="een routebeschrijving naar hoogeveldt">
 </main>
 <footer>
     &copy; - 2019 - Daan Receveur - 642199 - ITN 1C
