@@ -71,6 +71,7 @@ a {
 
 .fotospersonalia img {
     border-radius: 50px;
+    height:100%
 }
 
 .bulletpoint_title {
@@ -92,8 +93,8 @@ header h1 {
     background-color: #FFCD71;
 }
 
-h2, h3, h4, h5, h6 {
-    font-weight: normal;
+h2, h3{
+    font-weight: bold;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -127,10 +128,6 @@ h2, h3, h4, h5, h6 {
     display: block;
 }
 
-form{
-    padding: auto;
-}
-
 nav {
     display: flex;
     text-transform: uppercase;
@@ -153,7 +150,7 @@ nav {
 }
 
 main img{
-    width:50%;
+    width:100%;
 }
 
 @media screen and (max-width: 1000px) {
