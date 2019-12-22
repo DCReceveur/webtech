@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn projecten</title>
 </head>
 <body>
 <header>
-    <h1 class="pagina_titel"><a href="index.html"> <img
+    <h1 class="pagina_titel"><a href="../index.php"> <img
             alt="een prachtig hyves logo met Daan zijn gezicht. brought to you by de creatifa &trade;"
-            src="media/images/hyves_logo.png"
+            src="../media/images/hyves_logo.png"
            ></a>Daan
         Receveur Hyves</h1>
     <nav class="navbar">
         <div>
-            <a class="navbar_item" href="index.html">Home</a>
+            <a class="navbar_item" href="../index.php">Home</a>
         </div>
         <div>
-            <a class="navbar_item" href="personalia.html">Personalia</a>
+            <a class="navbar_item" href="../personalia.php">Personalia</a>
         </div>
         <!--        drop down menu start-->
         <div class="dropdown">
-           <a class="navbar_item" href="projecten.html">Projecten</a>
+           <a class="navbar_item" href="../projecten.php">Projecten</a>
             <div class="dropdown-content">
-                <a href="project_centipede.html">Centipede</a>
-                <a href="project_spaghetti.html">Spaghetti forever</a>
+                <a href="project_centipede.php">Centipede</a>
+                <a href="project_spaghetti.php">Spaghetti forever</a>
             </div>
         </div>
         <!--        drop down menu end-->
         <div>
-            <a class="navbar_item" href="contact.html">contact</a>
+            <a class="navbar_item" href="../contact.php">contact</a>
         </div>
     </nav>
     <div class="breadcrumb">
-        Je bent hier: <a href="index.html">Home</a> &gt;
-        <a href="projecten.html">Projecten</a> &gt;
+        Je bent hier: <a href="../index.php">Home</a> &gt;
+        <a href="../projecten.php">Projecten</a> &gt;
         <a href="project_spaghetti.html.html">Centipede</a>
     </div>
 </header>
@@ -52,7 +52,7 @@
 
         </p>
     </article>
-    <video class="project_media" controls src="media/video/igorrr_spaghetti_forever.mp4"> Sorry, your browser does not support this
+    <video class="project_media" controls src="../media/video/igorrr_spaghetti_forever.mp4"> Sorry, your browser does not support this
         video.
     </video>
 </main>

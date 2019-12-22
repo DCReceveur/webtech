@@ -8,32 +8,32 @@
 </head>
 <body>
 <header>
-    <h1 class="pagina_titel"><a href="../index.html"><img src="../media/images/hyves_logo.png" alt="Het hyves logo met de hoofden vervangen door Daan's hoofd"></a>Daan
+    <h1 class="pagina_titel"><a href="../index.php"><img src="../media/images/hyves_logo.png" alt="Het hyves logo met de hoofden vervangen door Daan's hoofd"></a>Daan
         Receveur Hyves</h1>
     <nav class="navbar">
         <div>
-            <a class="navbar_item" href="../index.html">Home</a>
+            <a class="navbar_item" href="../index.php">Home</a>
         </div>
         <div>
-            <a class="navbar_item" href="../personalia.html">Personalia</a>
+            <a class="navbar_item" href="../personalia.php">Personalia</a>
         </div>
         <!--        drop down menu start-->
         <div class="dropdown">
-           <a class="navbar_item" href="../projecten.html">Projecten</a>
+           <a class="navbar_item" href="../projecten.php">Projecten</a>
             <div class="dropdown-content">
-                <a href="../project_centipede.html">Centipede</a>
-                <a href="../project_spaghetti.html">Spaghetti forever</a>
+                <a href="../projecten/project_centipede.php">Centipede</a>
+                <a href="../projecten/project_spaghetti.php">Spaghetti forever</a>
             </div>
         </div>
         <!--        drop down menu end-->
         <div>
-            <a class="navbar_item" href="../contact.html">contact</a>
+            <a class="navbar_item" href="../contact.php">contact</a>
         </div>
     </nav>
     <div class="breadcrumb">
-        Je bent hier: <a href="../index.html">Home</a> &gt;
-        <a href="../personalia.html">Personalia</a> &gt;
-        <a href="../foto_paginas/stage_daan_pagina.html">Stage Daan</a>
+        Je bent hier: <a href="../index.php">Home</a> &gt;
+        <a href="../personalia.php">Personalia</a> &gt;
+        <a href="/stage_daan_pagina.html">Stage Daan</a>
     </div>
 </header>
 <main>
