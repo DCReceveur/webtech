@@ -1,5 +1,15 @@
-<h1 class="pagina_titel"><a href="index.php"><img src="/BP2_Webtech/media/images/hyves_logo.png" alt="Het hyves logo met de hoofden vervangen door Daan's hoofd"></a>Daan
-    Receveur Hyves</h1>
+<div class="pagina_titel">
+    <div>
+        <h1><a href="../index.php"><img src="/BP2_Webtech/media/images/hyves_logo.png"
+        alt="Het hyves logo met de hoofden vervangen door Daan's hoofd"></a>
+            <?php
+            echo generateName();
+            ?> Hyves</h1>
+    </div>
+    <div>
+        <?php generateLogin(); ?>
+    </div>
+</div>
 <nav class="navbar">
     <div>
         <a class="navbar_item" href="/BP2_Webtech/index.php">Home</a>

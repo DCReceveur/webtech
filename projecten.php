@@ -1,40 +1,13 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="css/projecten.css" rel="stylesheet" type="text/css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn projecten</title>
-</head>
+<?php
+require 'pagebuilders/scripts.php';
+include 'pagebuilders/head.html';
+?>
 <body>
 <header>
-    <h1 class="pagina_titel"><a href="index.html"><img src="media/images/hyves_logo.png" alt="Het hyves logo met de hoofden vervangen door Daan's hoofd"></a>Daan
-        Receveur Hyves</h1>
-    <nav class="navbar">
-        <div>
-            <a class="navbar_item" href="index.html">Home</a>
-        </div>
-        <div>
-            <a class="navbar_item" href="personalia.html">Personalia</a>
-        </div>
-        <!--        drop down menu start-->
-        <div class="dropdown">
-           <a class="navbar_item" href="projecten.html">Projecten</a>
-            <div class="dropdown-content">
-                <a href="project_centipede.html">Centipede</a>
-                <a href="project_spaghetti.html">Spaghetti forever</a>
-            </div>
-        </div>
-        <!--        drop down menu end-->
-        <div>
-            <a class="navbar_item" href="contact.html">contact</a>
-        </div>
-    </nav>
-    <div class="breadcrumb">
-        Je bent hier: <a href="index.html">Home</a> &gt;
-        <a href="projecten.html">Projecten</a>
-    </div>
+    <?php
+    include "pagebuilders/header.php";
+    ?>
+    <link href="/bp2_webtech/css/projecten.css" rel="stylesheet" type="text/css">
 </header>
 
 <main>
@@ -44,7 +17,7 @@
             <h2>Spaghetti forever</h2>
             <p>Het leren van de intro van spaghetti forever is een lopend project waar ik niet heel goed mee bezig
                 ben.</p>
-            <a href="project_spaghetti.html">lees meer</a>
+            <a href="projecten/project_spaghetti.php">lees meer</a>
         </article>
 
         <article>
@@ -60,7 +33,7 @@
             <h2>Centipede</h2>
             <p>Korte omschrijving:</p>
             <p>Centipede was een project wat ik moest maken voor het vak SPD.</p>
-            <a href="project_centipede.html">lees meer</a>
+            <a href="projecten/project_centipede.php">lees meer</a>
         </article>
 
         <article>
@@ -102,9 +75,8 @@
 
     </div>
 </main>
-<footer>
-    &copy; - 2019 - Daan Receveur - 642199 - ITN 1C
-</footer>
+<?php include "pagebuilders/footer.html"; ?>
+
 
 </body>
 </html>

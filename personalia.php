@@ -1,52 +1,25 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daan Receveur</title>
-</head>
+<?php
+require 'pagebuilders/scripts.php';
+include 'pagebuilders/head.html';
+?>
 <body>
 <header>
-    <h1 class="pagina_titel"><a href="index.html"><img src="media/images/hyves_logo.png" alt="Het hyves logo met de hoofden vervangen door Daan's hoofd"></a>Daan
-        Receveur Hyves</h1>
-    <nav class="navbar">
-        <div>
-            <a class="navbar_item" href="index.html">Home</a>
-        </div>
-        <div>
-            <a class="navbar_item" href="personalia.html">Personalia</a>
-        </div>
-        <!--        drop down menu start-->
-        <div class="dropdown">
-           <a class="navbar_item" href="projecten.html">Projecten</a>
-            <div class="dropdown-content">
-                <a href="project_centipede.html">Centipede</a>
-                <a href="project_spaghetti.html">Spaghetti forever</a>
-            </div>
-        </div>
-        <!--        drop down menu end-->
-        <div>
-            <a class="navbar_item" href="contact.html">contact</a>
-        </div>
-    </nav>
-    <div class="breadcrumb">
-        Je bent hier: <a href="index.html">Home</a> &#62;
-        <a href="personalia.html">Personalia</a>
-    </div>
+    <?php
+    include "pagebuilders/header.php";
+    ?>
 </header>
 <main>
     <div>
         <div class="fotospersonalia">
 
-            <a href="foto_paginas/boze_daan_pagina.html"> <img alt="een foto van een boze Daan"
-                                                               src="media/images/pictures_200px/boze_daan_200px.jpg"></a>
-            <a href="foto_paginas/afgeleide_daan_pagina.html"> <img alt="een foto van een mobiel kijkende Daan"
-                                                                    src="media/images/pictures_200px/afgeleide_daan_200px.jpg"></a>
-            <a href="foto_paginas/afstand_daan.html"> <img alt="een foto van een in de verte kijkende Daan"
-                                                           src="media/images/pictures_200px/afstand_daan_200px.jpg"></a>
-            <a href="foto_paginas/stage_daan_pagina.html"> <img alt="een foto van Daan in Budapest"
-                                                                src="media/images/pictures_200px/stage_daan_200px.jpg"></a>
+            <a href="personalia/boze_daan.php"> <img alt="een foto van een boze Daan"
+                                                     src="media/images/pictures_200px/boze_daan_200px.jpg"></a>
+            <a href="personalia/afgeleide_daan.php"> <img alt="een foto van een mobiel kijkende Daan"
+                                                          src="media/images/pictures_200px/afgeleide_daan_200px.jpg"></a>
+            <a href="personalia/afstand_daan.php"> <img alt="een foto van een in de verte kijkende Daan"
+                                                        src="media/images/pictures_200px/afstand_daan_200px.jpg"></a>
+            <a href="personalia/stage_daan.php"> <img alt="een foto van Daan in Budapest"
+                                                      src="media/images/pictures_200px/stage_daan_200px.jpg"></a>
         </div>
         <h2>Algemeen</h2>
         <p class="textfield">Ik woon in Nijmegen, ben ongeveer hoog bejaard en houdt niet van over mezelf vertellen.</p>
@@ -90,9 +63,6 @@
         </ul>
     </div>
 </main>
-<footer>
-    &copy; - 2019 - Daan Receveur - 642199 - ITN 1C
-</footer>
-
+<?php include "pagebuilders/footer.html"; ?>
 </body>
 </html>

@@ -1,43 +1,12 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <link href="../css/styles.css" rel="stylesheet" type="text/css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn projecten</title>
-</head>
+<?php
+require '../pagebuilders/scripts.php';
+include '../pagebuilders/head.html';
+?>
 <body>
 <header>
-    <h1 class="pagina_titel"><a href="../index.php"> <img
-            alt="een prachtig hyves logo met Daan zijn gezicht. brought to you by de creatifa &trade;"
-            src="../media/images/hyves_logo.png"
-           ></a>Daan
-        Receveur Hyves</h1>
-    <nav class="navbar">
-        <div>
-            <a class="navbar_item" href="../index.php">Home</a>
-        </div>
-        <div>
-            <a class="navbar_item" href="../personalia.php">Personalia</a>
-        </div>
-        <!--        drop down menu start-->
-        <div class="dropdown">
-           <a class="navbar_item" href="../projecten.php">Projecten</a>
-            <div class="dropdown-content">
-                <a href="project_centipede.php">Centipede</a>
-                <a href="project_spaghetti.php">Spaghetti forever</a>
-            </div>
-        </div>
-        <!--        drop down menu end-->
-        <div>
-            <a class="navbar_item" href="../contact.php">contact</a>
-        </div>
-    </nav>
-    <div class="breadcrumb">
-        Je bent hier: <a href="../index.php">Home</a> &gt;
-        <a href="../projecten.php">Projecten</a> &gt;
-        <a href="project_spaghetti.html.html">Centipede</a>
-    </div>
+    <?php
+    include "../pagebuilders/header.php";
+    ?>
 </header>
 <main>
     <article>
@@ -56,9 +25,8 @@
         video.
     </video>
 </main>
-<footer>
-    &copy; - 2019 - Daan Receveur - 642199 - ITN 1C
-</footer>
+<?php include "../pagebuilders/footer.html"; ?>
+
 
 </body>
 </html>
