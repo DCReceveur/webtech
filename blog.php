@@ -9,22 +9,26 @@ include 'pagebuilders/head.html';
     ?>
 </header>
 <?php
-if(isset($_POST["bericht"])){
-    $naamBericht[$_SESSION["username"]]  = $_POST["bericht"];
-    $_SESSION["post"] = $naamBericht;
+if (isset($_POST["bericht"])) {
+    $arrayitem = array(
+        "datetime" => getdate(),
+        "name" => $_SESSION["username"],
+        "bericht" => $_POST["bericht"]
+    );
+    array_push($_SESSION["blog"],$arrayitem);
 }
 
-if(isset($_SESSION["username"])){
+if (isset($_SESSION["username"])) {
     echo '
     <form action="blog.php" method="post">
         <label for="bericht">Bericht</label><br>
         <textarea type="text" name="bericht" id="bericht" rows="5" cols="30"></textarea><br>
-        <input name="submit" id="submit" type="submit" value="post">
+        <input name="submit" id="submit" type="submit" value="blogpost">
     </form>';
 }
-if(isset($_SESSION["post"])){
-    foreach($_SESSION["post"] as $naam => $bericht){
-        echo $naam . "<br>". $bericht;
+if (isset($_SESSION["blog"])) {
+    foreach ($_SESSION["blog"] as $naam => $bericht) {
+        echo $naam . "<br>" . $bericht;
     }
 }
 ?>

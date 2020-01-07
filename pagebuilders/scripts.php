@@ -49,16 +49,28 @@ LOGOUT;
     echo $string;
 }
 
-//function generateHead(){
-//    $head = <<<HEAD
-//<!DOCTYPE html>
-//<html lang="nl">
-//<head>
-//    <link href="../../css/styles.css" rel="stylesheet" type="text/css">
-//    <meta charset="UTF-8">
-//    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//    <title>Daan Receveur</title>
-//</head>
-//HEAD;
-//return $head;
-//}
+function postBlogItem($title, $tekst){
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "WebtechBP2";
+    $statement = <<<STATEMENT
+    insert into blog values (4,'$title','$tekst',current_date)
+STATEMENT;
+    //TODO check how to get the 4 to increment
+
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conn->prepare($statement);
+        $stmt->execute();
+
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+    $conn = null;
+}

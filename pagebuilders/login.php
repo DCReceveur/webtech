@@ -16,7 +16,6 @@ LOGIN;
     } else {
         $string = <<<LOGOUT
 <form method="POST" action="submit.php">
-    <label for="logout">
     <input name="submit" id="submit" type="button" value="logout">
 LOGOUT;
 
