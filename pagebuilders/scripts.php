@@ -1,26 +1,28 @@
 <?php
 session_start();
 
+
 function generateBreadcrumb()
 {
     $breadcrumb = "";
     $fullcrumb = "";
-    $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
-    foreach(array_slice($crumbs,1) as $crumb){
-        $fullcrumb .= $crumb."/";
-        $crumb = str_replace('project_', '',$crumb);
-        $crumb = str_replace('BP2_Webtech', 'Home',$crumb);
-        $breadcrumb.= "<a href='/".$fullcrumb."'>" . ucfirst(str_replace(array('.php','_'),array('',' '),$crumb)) . "</a> &gt;";
+    $crumbs = explode("/", $_SERVER["REQUEST_URI"]);
+    foreach (array_slice($crumbs, 1) as $crumb) {
+        $fullcrumb .= $crumb . "/";
+        $crumb = str_replace('project_', '', $crumb);
+        $crumb = str_replace('BP2_Webtech', 'Home', $crumb);
+        $breadcrumb .= "<a href='/" . $fullcrumb . "'>" . ucfirst(str_replace(array('.php', '_'), array('', ' '), $crumb)) . "</a> &gt;";
     }
     $breadcrumb = trim($breadcrumb, '&gt;');
     $breadcrumb = trim($breadcrumb, '/');
     return $breadcrumb;
 }
 
-function generateName(){
-    if(isset($_SESSION["username"])){
+function generateName()
+{
+    if (isset($_SESSION["username"])) {
         return $_SESSION["username"];
-    }else{
+    } else {
         return "Daan Receveur";
     }
 }
@@ -49,21 +51,29 @@ LOGOUT;
     echo $string;
 }
 
-function postBlogItem($title, $tekst){
+function postBlogItem($title, $tekst)
+{
+    require_once 'database.php';
+    $conn = getConnection();
 
+    $statement = "insert into blog (titel, tekst, datum) VALUES (:title, :text, :datum)";
+
+
+    $stmt = $conn->prepare($statement);
+    $stmt->execute([':title' => $title, ':text' => $tekst, ':datum' => "01-01-2020"]);
+}
+
+function getProjects()
+{
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "WebtechBP2";
-    $statement = <<<STATEMENT
-    insert into blog values (4,'$title','$tekst',current_date)
-STATEMENT;
-    //TODO check how to get the 4 to increment
 
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $conn = new PDO("mysql:host = $servername;dbname = $dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare($statement);
+        $stmt = $conn->prepare("select * from projecten");
         $stmt->execute();
 
         // set the resulting array to associative
@@ -73,4 +83,5 @@ STATEMENT;
         echo "Error: " . $e->getMessage();
     }
     $conn = null;
+    return $stmt->fetchAll();
 }
