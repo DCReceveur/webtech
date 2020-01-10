@@ -35,6 +35,7 @@ require_once 'pagebuilders/database.php';
                     <label for="bericht">Bericht</label><br>
                     <textarea type="text" name="bericht" id="bericht" rows="5" cols="30"></textarea><br>
                     <input name="submit" id="submit" type="submit" value="blogpost">
+                    <input type="hidden" name="posttype" value="blogpost">
                 </form>';
     }
 

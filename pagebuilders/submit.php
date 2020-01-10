@@ -8,7 +8,6 @@ if (isset($_POST)) {
         require 'login.php';
         if(login($_POST["username"], $_POST["password"]) == 1){
             $_SESSION["username"] = $_POST["username"];
-//            echo 'login is a go';
         }
     } elseif ($_POST["submit"] == "logout") {
         session_destroy();

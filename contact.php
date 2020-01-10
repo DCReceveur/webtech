@@ -21,6 +21,7 @@ include 'pagebuilders/head.html';
             <label for="message">*Bericht</label><br>
             <textarea id="message" name="message" required rows="5" cols="30"></textarea> <br>
             <input formaction="contact.html" type="submit" value="Submit">
+            <input type="hidden" name="posttype" value="contactform">;
         </form>
     </div>
     <div>

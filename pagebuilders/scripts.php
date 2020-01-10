@@ -27,29 +27,29 @@ function generateName()
     }
 }
 
-function generateLogin()
-{
-    if (!isset($_SESSION["username"])) {
-        $string = <<<LOGIN
-<form method="POST" action="/bp2_webtech/pagebuilders/submit.php">
-            <label for="username">Username</label>
-            <input name="username" id="username" type="text" required><br>
-            <label for="password">Password</label>
-            <input name="password" id="password" type="password" required><br>
-            <input type="submit" name="submit" id="submit" value="login">
-        </form>
-LOGIN;
-
-    } else {
-        $string = <<<LOGOUT
-<form method="POST" action="/bp2_webtech/pagebuilders/submit.php">
-    <input name="submit" id="submit" type="submit" value="logout">
-</form>    
-LOGOUT;
-
-    }
-    echo $string;
-}
+//function generateLogin()
+//{
+//    if (!isset($_SESSION["username"])) {
+//        $string = <<<LOGIN
+//<form method="POST" action="/bp2_webtech/pagebuilders/submit.php">
+//            <label for="username">Username</label>
+//            <input name="username" id="username" type="text" required><br>
+//            <label for="password">Password</label>
+//            <input name="password" id="password" type="password" required><br>
+//            <input type="submit" name="submit" id="submit" value="login">
+//        </form>
+//LOGIN;
+//
+//    } else {
+//        $string = <<<LOGOUT
+//<form method="POST" action="/bp2_webtech/pagebuilders/submit.php">
+//    <input name="submit" id="submit" type="submit" value="logout">
+//</form>
+//LOGOUT;
+//
+//    }
+//    echo $string;
+//}
 
 function postBlogItem($title, $tekst)
 {

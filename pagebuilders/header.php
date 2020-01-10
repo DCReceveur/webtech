@@ -7,7 +7,9 @@
             ?> Hyves</h1>
     </div>
     <div>
-        <?php generateLogin(); ?>
+        <?php
+        include 'create_login_field.php';
+        generateLogin(); ?>
     </div>
 </div>
 <nav class="navbar">
