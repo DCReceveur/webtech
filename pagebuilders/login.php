@@ -1,26 +1,18 @@
 <?php
-session_start();
-function generateLogin()
-{
-    if (isset($_SESSION["username"])) {
-        $string = <<<LOGIN
-<form method="POST" action="submit.php">
-            <label for="username">Username</label>
-            <input name="username" id="username" type="text" required><br>
-            <label for="password">Password</label>
-            <input name="password" id="password" type="password" required><br>
-            <input type="submit" name="submit" value="login">
-        </form>
-LOGIN;
+include 'database.php';
 
-    } else {
-        $string = <<<LOGOUT
-<form method="POST" action="submit.php">
-    <input name="submit" id="submit" type="button" value="logout">
-LOGOUT;
 
+function login($gebruikersnaam, $wachtwoord){
+    $conn = getConnection();
+    $statement = "select * from beheerder";
+    $stmt = $conn->prepare($statement);
+    $stmt->execute();
+// set the resulting array to associative
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    foreach ($stmt->fetchAll() as $record)
+    if(password_verify($wachtwoord,$record['wachtwoord'])){
+        return 1;
     }
-    echo $string;
 }
-
 ?>
