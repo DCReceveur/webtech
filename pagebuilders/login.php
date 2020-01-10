@@ -1,7 +1,7 @@
 <?php
 include 'database.php';
 
-
+//        echo password_hash('wachtwoord123', PASSWORD_DEFAULT);
 function login($gebruikersnaam, $wachtwoord){
     $conn = getConnection();
     $statement = "select * from beheerder";

@@ -11,7 +11,7 @@ function generateLogin()
             <label for="username">Username</label>
             <input name="username" id="username" type="text" required><br>
             <label for="password">Password</label>
-            <input name="password" id="password" type="password" required><br>
+            <input name="password" id="password" type="password" required><br> 
             <input type="submit" name="submit" value="login">
             
         </form>
