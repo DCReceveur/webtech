@@ -11,7 +11,7 @@ function login($gebruikersnaam, $wachtwoord){
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
     foreach ($stmt->fetchAll() as $record)
-    if(password_verify($wachtwoord,$record['wachtwoord'])){
+    if(password_verify($wachtwoord,$record['wachtwoord']) && $gebruikersnaam == $record['naam']){
         return 1;
     }
 }
