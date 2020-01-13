@@ -26,6 +26,12 @@
     <div>
         <a class="navbar_item" href="/BP2_Webtech/contact.php">contact</a>
     </div>
+    <div>
+        <a class="navbar_item" href="/BP2_Webtech/krabbels.php">Krabbels</a>
+    </div>
+    <div>
+        <a class="navbar_item" href="/BP2_Webtech/beheer.php">beheer</a>
+    </div>
 </nav>
 <div class="breadcrumb">
     Je bent hier: <?php echo generatebreadcrumb(); ?>

@@ -21,7 +21,7 @@ function generateBreadcrumb()
 function generateName()
 {
     if (isset($_SESSION["username"])) {
-        return $_SESSION["username"];
+        return "Administrator";
     } else {
         return "Daan Receveur";
     }
@@ -56,11 +56,11 @@ function postBlogItem($title, $tekst)
     require_once 'database.php';
     $conn = getConnection();
 
-    $statement = "insert into blog (titel, tekst, datum) VALUES (:title, :text, :datum)";
+    $statement = "insert into blog (titel, tekst) VALUES (:title, :text)";
 
 
     $stmt = $conn->prepare($statement);
-    $stmt->execute([':title' => $title, ':text' => $tekst, ':datum' => "01-01-2020"]);
+    $stmt->execute([':title' => $title, ':text' => $tekst]);
 }
 
 function getProjects()
