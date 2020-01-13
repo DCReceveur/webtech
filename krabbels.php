@@ -26,8 +26,8 @@ require_once 'pagebuilders/database.php';
         echo $record['tekst'];
         echo "</div><br>";
     }
-
         echo "</div>";
+
 
 
     ?>

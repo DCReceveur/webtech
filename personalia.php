@@ -22,7 +22,7 @@ include 'pagebuilders/head.html';
                                                       src="media/images/pictures_200px/stage_daan_200px.jpg"></a>
         </div>
         <h2>Algemeen</h2>
-        <p class="textfield">Ik woon in Nijmegen, ben ongeveer hoog bejaard en houdt niet van over mezelf vertellen.</p>
+        <p class="textfield">Ik woon in Nijmegen, ben ongeveer hoog bejaard en houd niet van over mezelf vertellen.</p>
 
         <h2>Werk-ervaring</h2>
         <ul>

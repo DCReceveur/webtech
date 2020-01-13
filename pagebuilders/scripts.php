@@ -27,30 +27,6 @@ function generateName()
     }
 }
 
-//function generateLogin()
-//{
-//    if (!isset($_SESSION["username"])) {
-//        $string = <<<LOGIN
-//<form method="POST" action="/bp2_webtech/pagebuilders/submit.php">
-//            <label for="username">Username</label>
-//            <input name="username" id="username" type="text" required><br>
-//            <label for="password">Password</label>
-//            <input name="password" id="password" type="password" required><br>
-//            <input type="submit" name="submit" id="submit" value="login">
-//        </form>
-//LOGIN;
-//
-//    } else {
-//        $string = <<<LOGOUT
-//<form method="POST" action="/bp2_webtech/pagebuilders/submit.php">
-//    <input name="submit" id="submit" type="submit" value="logout">
-//</form>
-//LOGOUT;
-//
-//    }
-//    echo $string;
-//}
-
 function postBlogItem($title, $tekst)
 {
     require_once 'database.php';
@@ -65,23 +41,11 @@ function postBlogItem($title, $tekst)
 
 function getProjects()
 {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "WebtechBP2";
+    require_once 'database.php';
+    $conn = getConnection();
 
-    try {
-        $conn = new PDO("mysql:host = $servername;dbname = $dbname", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("select * from projecten");
-        $stmt->execute();
+    $stmt = $conn->prepare("select * from projecten");
+    $stmt->execute();
 
-        // set the resulting array to associative
-        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
-    } catch (PDOException $e) {
-        echo "Error: " . $e->getMessage();
-    }
-    $conn = null;
     return $stmt->fetchAll();
 }
