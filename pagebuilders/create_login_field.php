@@ -19,9 +19,8 @@ LOGIN;
 
     } else {
         $string = <<<LOGOUT
-<form method="POST" action="submit.php">
-    <input name="submit" id="submit" type="button" value="logout">
-
+<form method="POST" action="pagebuilders/submit.php">
+    <input name="submit" id="submit" type="submit" value="logout">
 </form>
 LOGOUT;
 

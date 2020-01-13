@@ -12,6 +12,10 @@ include 'pagebuilders/head.html';
 <main>
     <?php
 
+
+        include 'pagebuilders/create_login_field.php';
+        generateLogin();
+
     if (isset($_SESSION["username"])) {
         echo '
                 <form action="pagebuilders/submit.php" method="post">
@@ -22,8 +26,8 @@ include 'pagebuilders/head.html';
                     <input name="submit" id="submit" type="submit" value="blogpost">
                 </form>';
     }
-
     echo "</div>";
+
     ?>
 </main>
 <?php include "pagebuilders/footer.html"; ?>

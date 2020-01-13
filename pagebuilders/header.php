@@ -6,11 +6,6 @@
             echo generateName();
             ?> Hyves</h1>
     </div>
-    <div>
-        <?php
-        include 'create_login_field.php';
-        generateLogin(); ?>
-    </div>
 </div>
 <nav class="navbar">
     <div>
