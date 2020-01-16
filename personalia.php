@@ -1,6 +1,8 @@
+<!-- Daan Receveur 642199 -->
+<!-- 14-01-2020 -->
 <?php
 require 'pagebuilders/scripts.php';
-include 'pagebuilders/head.html';
+include 'pagebuilders/head.php';
 ?>
 <body>
 <header>
@@ -63,6 +65,6 @@ include 'pagebuilders/head.html';
         </ul>
     </div>
 </main>
-<?php include "pagebuilders/footer.html"; ?>
+<?php include "pagebuilders/footer.php"; ?>
 </body>
 </html>

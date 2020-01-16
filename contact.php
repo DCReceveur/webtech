@@ -1,6 +1,8 @@
+<!-- Daan Receveur 642199 -->
+<!-- 14-01-2020 -->
 <?php
 require 'pagebuilders/scripts.php';
-include 'pagebuilders/head.html';
+include 'pagebuilders/head.php';
 ?>
 <body>
 <header>
@@ -11,6 +13,7 @@ include 'pagebuilders/head.html';
 <main>
     <div>
         <h3>Contact opnemen? vul het formulier in!</h3>
+
         <form method="POST" action="pagebuilders/submit_contactform.php">
             <label for="firstname">*Voornaam</label> <br>
             <input name="firstname" id="firstname" type="text" required><br>
@@ -26,13 +29,14 @@ include 'pagebuilders/head.html';
             <textarea id="message" name="message" required rows="5" cols="30"></textarea> <br>
             <input type="submit" value="Submit">
         </form>
+        * is verplicht!
     </div>
     <div>
         <h3>je kan natuurlijk ook op de koffie komen!</h3>
         <img src="media/images/hoogeveldt_map.PNG" alt="een routebeschrijving naar hoogeveldt">
     </div>
 </main>
-<?php include "pagebuilders/footer.html"; ?>
+<?php include "pagebuilders/footer.php"; ?>
 
 
 </body>

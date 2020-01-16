@@ -1,3 +1,5 @@
+<!-- Daan Receveur 642199 -->
+<!-- 14-01-2020 -->
 <div class="pagina_titel">
     <div>
         <h1><a href="../index.php"><img src="/BP2_Webtech/media/images/hyves_logo.png"
@@ -34,5 +36,5 @@
     </div>
 </nav>
 <div class="breadcrumb">
-    Je bent hier: <?php echo generatebreadcrumb(); ?>
+    Je bent hier: <?php echo maakBreadcrumb(); ?>
 </div>

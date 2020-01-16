@@ -1,6 +1,6 @@
 <?php
 require '../pagebuilders/scripts.php';
-include '../pagebuilders/head.html';
+include '../pagebuilders/head.php';
 ?>
 <body>
 <header>
@@ -14,7 +14,7 @@ include '../pagebuilders/head.html';
         <p class="textfield">Dit was een groepsfoto die gemaakt was aan het eind van mijn stage in Hongarije.</p>
     </div>
 </main>
-<?php include "../pagebuilders/footer.html"; ?>
+<?php include "../pagebuilders/footer.php"; ?>
 
 </body>
 </html>

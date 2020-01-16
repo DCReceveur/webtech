@@ -1,6 +1,6 @@
 <?php
 require '../pagebuilders/scripts.php';
-include '../pagebuilders/head.html';
+include '../pagebuilders/head.php';
 ?>
 <body>
 <header>
@@ -15,7 +15,7 @@ include '../pagebuilders/head.html';
         <p class="textfield">Hier zat ik naar de drijgende wolken te kijken onder het genot van borrelnootjes.</p>
     </div>
 </main>
-<?php include "../pagebuilders/footer.html"; ?>
+<?php include "../pagebuilders/footer.php"; ?>
 
 </body>
 </html>

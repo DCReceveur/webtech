@@ -1,3 +1,5 @@
+<!-- Daan Receveur 642199 -->
+<!-- 14-01-2020 -->
 <?php
 if (!isset($_SESSION)) {
     session_start();

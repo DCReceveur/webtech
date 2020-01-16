@@ -1,7 +1,9 @@
+<!-- Daan Receveur 642199 -->
+<!-- 14-01-2020 -->
 <?php
 require 'pagebuilders/scripts.php';
-include 'pagebuilders/head.html';
-
+include 'pagebuilders/head.php';
+include 'pagebuilders/maak_login_veld.php';
 ?>
 <body>
 <header>
@@ -10,14 +12,12 @@ include 'pagebuilders/head.html';
     ?>
 </header>
 <main>
-    <?php
+    <div>
+        <?php
 
-
-        include 'pagebuilders/create_login_field.php';
-        generateLogin();
-
-    if (isset($_SESSION["username"])) {
-        echo '
+        if (isset($_SESSION["username"])) {
+            echo '
+            <h2>Blog item toevoegen</h2>
                 <form action="pagebuilders/submit.php" method="post">
                     <label for="titel">titel</label><br>
                     <input type="text" name="titel" id="titel"><br>
@@ -25,12 +25,18 @@ include 'pagebuilders/head.html';
                     <textarea type="text" name="bericht" id="bericht" rows="5" cols="30"></textarea><br>
                     <input name="submit" id="submit" type="submit" value="blogpost">
                 </form>';
-    }
-    echo "</div>";
+        }
+        generateLogin();
 
-    ?>
+        echo "</div>";
+
+        if (isset($_SESSION["username"])) {
+            echo getBerichten();
+        }
+        echo "</div>";
+        ?>
 </main>
-<?php include "pagebuilders/footer.html"; ?>
+<?php include "pagebuilders/footer.php"; ?>
 
 </body>
 </html>
